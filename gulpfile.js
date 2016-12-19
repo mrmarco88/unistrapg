@@ -193,7 +193,7 @@ gulp.task('watch', function () {
     gulp.watch(config.sassSrc, ['styles']);
     gulp.watch(config.app + 'content/images/**', ['images']);
     gulp.watch(config.app + 'app/**/*.js', ['inject:app']);
-    gulp.watch([config.app + '*.html', config.app + 'app/**', config.app + 'i18n/**']).on('change', browserSync.reload);
+    gulp.watch([config.app + '*.html', config.app + 'content/css/*.css',config.app + 'app/**', config.app + 'i18n/**']).on('change', browserSync.reload);
 });
 
 gulp.task('install', function () {
