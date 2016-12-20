@@ -20,5 +20,13 @@
 
     <cache alias="com.consoft.unistrapg.domain.User.persistentTokens" uses-template="simple"/>
 
+    <cache alias="com.consoft.unistrapg.domain.Student" uses-template="simple"/>
+
+    <cache alias="com.consoft.unistrapg.domain.Course" uses-template="simple"/>
+
+    <cache alias="com.consoft.unistrapg.domain.Course.students" uses-template="simple"/>
+
+    <cache alias="com.consoft.unistrapg.domain.Student.courses" uses-template="simple"/>
+
     <!-- jhipster-needle-ehcache-add-entry -->
 </config>

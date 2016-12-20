@@ -1,0 +1,53 @@
+
+<div>
+    <h2><span data-translate="unistrapgApp.student.detail.title">Student</span> {{vm.student.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="unistrapgApp.student.firstName">First Name</span></dt>
+        <dd>
+            <span>{{vm.student.firstName}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.student.lastName">Last Name</span></dt>
+        <dd>
+            <span>{{vm.student.lastName}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.student.email">Email</span></dt>
+        <dd>
+            <span>{{vm.student.email}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.student.phoneNumber">Phone Number</span></dt>
+        <dd>
+            <span>{{vm.student.phoneNumber}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.student.birthDate">Birth Date</span></dt>
+        <dd>
+            <span>{{vm.student.birthDate | date:'mediumDate'}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.student.smartCardId">Smart Card Id</span></dt>
+        <dd>
+            <span>{{vm.student.smartCardId}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.student.user">User</span></dt>
+        <dd>
+            {{vm.student.user.id}}
+        </dd>
+        <dt><span data-translate="unistrapgApp.student.course">Course</span></dt>
+        <dd>
+            <span ng-repeat="course in vm.student.courses">
+                <a ui-sref="course-detail({id: course.id})">{{course.code}}</a>{{$last ? '' : ', '}}
+            </span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="student-detail.edit({id:vm.student.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>

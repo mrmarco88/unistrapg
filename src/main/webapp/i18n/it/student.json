@@ -1,0 +1,29 @@
+{
+    "unistrapgApp": {
+        "student" : {
+            "home": {
+                "title": "Students",
+                "createLabel": "Genera un nuovo Student",
+                "createOrEditLabel": "Genera o modifica un Student",
+                "search": "Cerca Student"
+            },
+            "created": "&Egrave; stato generato un nuovo Student con identificatore { param }}",
+            "updated": "&Egrave; stato aggiornato Student identificato da {{ param }}",
+            "deleted": "&Egrave; stato eliminato Student con identificatore {{ param }}",
+            "delete": {
+                "question": "Sei sicuro di volere eliminare Student {{ id }}?"
+            },
+            "detail": {
+                "title": "Student"
+            },
+            "firstName": "First Name",
+            "lastName": "Last Name",
+            "email": "Email",
+            "phoneNumber": "Phone Number",
+            "birthDate": "Birth Date",
+            "smartCardId": "Smart Card Id",
+            "user": "User",
+            "course": "Course"
+        }
+    }
+}

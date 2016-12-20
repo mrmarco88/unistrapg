@@ -1,0 +1,12 @@
+{
+    "unistrapgApp": {
+        "Language" : {
+            "null": "",
+            "ITALIAN": "ITALIAN",
+            "ENGLISH": "ENGLISH",
+            "FRENCH": "FRENCH",
+            "SPANISH": "SPANISH",
+            "CHINESE": "CHINESE"
+        }
+    }
+}

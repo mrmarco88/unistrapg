@@ -1,0 +1,47 @@
+
+<div>
+    <h2><span data-translate="unistrapgApp.course.detail.title">Course</span> {{vm.course.id}}</h2>
+    <hr>
+    <jhi-alert-error></jhi-alert-error>
+    <dl class="dl-horizontal jh-entity-details">
+        <dt><span data-translate="unistrapgApp.course.code">Code</span></dt>
+        <dd>
+            <span>{{vm.course.code}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.course.name">Name</span></dt>
+        <dd>
+            <span>{{vm.course.name}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.course.lecturer">Lecturer</span></dt>
+        <dd>
+            <span>{{vm.course.lecturer}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.course.duration">Duration</span></dt>
+        <dd>
+            <span>{{vm.course.duration}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.course.minNumRegStud">Min Num Reg Stud</span></dt>
+        <dd>
+            <span>{{vm.course.minNumRegStud}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.course.level">Level</span></dt>
+        <dd>
+            <span data-translate="{{'unistrapgApp.CourseLevel.' + vm.course.level}}">{{vm.course.level}}</span>
+        </dd>
+        <dt><span data-translate="unistrapgApp.course.taughtLanguage">Taught Language</span></dt>
+        <dd>
+            <span data-translate="{{'unistrapgApp.Language.' + vm.course.taughtLanguage}}">{{vm.course.taughtLanguage}}</span>
+        </dd>
+    </dl>
+
+    <button type="submit"
+            ui-sref="{{ vm.previousState }}"
+            class="btn btn-info">
+        <span class="glyphicon glyphicon-arrow-left"></span>&nbsp;<span data-translate="entity.action.back"> Back</span>
+    </button>
+
+    <button type="button" ui-sref="course-detail.edit({id:vm.course.id})" class="btn btn-primary">
+        <span class="glyphicon glyphicon-pencil"></span>
+        <span class="hidden-xs hidden-sm" data-translate="entity.action.edit"> Edit</span>
+    </button>
+</div>
