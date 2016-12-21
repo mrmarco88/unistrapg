@@ -27,7 +27,6 @@ describe('account', function () {
 
         element(by.css('.alert-danger')).getAttribute('data-translate').then(function (value) {
             expect(value).toMatch(/login.messages.error.authentication/);
-            //expect(value).toMatch(/MARONN/);
         });
     });
 
