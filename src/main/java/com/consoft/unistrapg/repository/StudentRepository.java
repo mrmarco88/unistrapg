@@ -13,7 +13,7 @@ import java.util.List;
 @SuppressWarnings("unused")
 public interface StudentRepository extends JpaRepository<Student,Long> {
 
-    @Query("select distinct student from Student student left join fetch student.courses")
+    @Query("select distinct student from Student student left join fetch student.courses where student.user.login = ?#{principal.username}")
     List<Student> findAllWithEagerRelationships();
 
     @Query("select student from Student student left join fetch student.courses where student.id =:id")

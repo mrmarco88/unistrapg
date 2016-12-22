@@ -93,8 +93,8 @@ public class StudentResource {
     @Timed
     public List<Student> getAllStudents() {
         log.debug("REST request to get all Students");
-        //List<Student> students = studentRepository.findAllWithEagerRelationships();
-        List<Student> students = studentRepository.findByUserIsCurrentUser();
+        List<Student> students = studentRepository.findAllWithEagerRelationships();
+        //List<Student> students = studentRepository.findByUserIsCurrentUser();
         //List<Student> students = studentRepository.findOneWithEagerRelationships(id); //Non mi ha creato una cippalippa di metodo automaticamente come nel video al minuto 50circa
         return students;
     }
