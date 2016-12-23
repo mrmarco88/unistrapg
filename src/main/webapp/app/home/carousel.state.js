@@ -8,30 +8,25 @@
     stateConfig.$inject = ['$stateProvider'];
 
     function stateConfig($stateProvider) {
-        $stateProvider.state('home', {
+        $stateProvider.state('carousel', {
             parent: 'app',
             url: '/',
             data: {
                 authorities: []
             },
             views: {
-                'content@': {
-                    templateUrl: 'app/home/home.html',
-                    controller: 'HomeController',
-                    controllerAs: 'vm'
-                },
                 'carousel@': {
                 	templateUrl: 'app/home/carousel.html',
                     controller: 'CarouselController',
                     controllerAs: 'vm'
                 }
-            },
+            }/*,
             resolve: {
                 mainTranslatePartialLoader: ['$translate', '$translatePartialLoader', function ($translate,$translatePartialLoader) {
-                    $translatePartialLoader.addPart('home');
+                    $translatePartialLoader.addPart('carousel');
                     return $translate.refresh();
                 }]
-            }
+            }*/
         });
     }
 })();

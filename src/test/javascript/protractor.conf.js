@@ -18,9 +18,9 @@ exports.config = {
     allScriptsTimeout: 20000,
 
     suites: {
-        account: './e2e/account/*.js'/*,
-        admin: './e2e/admin/*.js',
-        entity: './e2e/entities/course.js'*/
+        /*account: './e2e/account/*.js',
+        admin: './e2e/admin/*.js',*/
+        entity: './e2e/entities/course.js'
     },
 
     capabilities: {
